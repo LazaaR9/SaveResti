@@ -1,7 +1,8 @@
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
 # Ask Doubt on telegram @KingVJ01
-
+#peerid
+import pyrogram.utils
 from pyrogram import Client
 from pyromod import listen
 from config import API_ID, API_HASH, BOT_TOKEN
@@ -19,6 +20,8 @@ class Bot(Client):
             sleep_threshold=10
         )
 
+    pyrogram.utils.MIN_CHANNEL_ID = -1009999999999
+    
     async def start(self):
             
         await super().start()
